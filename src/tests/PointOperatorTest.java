@@ -1,7 +1,6 @@
 package tests;
 
 import org.junit.jupiter.api.Test;
-import tp1.Point2d;
 import tp1.PointOperator;
 
 import static org.junit.jupiter.api.Assertions.*;

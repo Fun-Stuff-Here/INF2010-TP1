@@ -10,8 +10,11 @@ public final class LetterFactory {
 
     // TODO
     public static BaseShape create_e() {
-        return new BaseShape().add(new Rectangle(stripeThickness,maxHeight)
-                .translate(new Point2d(-halfMaxWidth,0.0)));
+        return new BaseShape().add(new Ellipse(maxWidth,maxHeight))
+                        .remove(new Ellipse(maxWidth - stripeThickness, maxHeight - stripeThickness))
+                        .add(new Rectangle(maxWidth, stripeThickness))
+                .remove((new Rectangle(2 * stripeThickness, stripeThickness))
+                                .translate(new Point2d(2 * stripeThickness, stripeThickness)));
     }
 
     // TODO
@@ -25,27 +28,33 @@ public final class LetterFactory {
     // TODO
     public static BaseShape create_C() {
         return new BaseShape().add(new Ellipse(maxWidth, maxHeight))
-                                .remove(new Ellipse(maxWidth-stripeThickness, maxHeight - stripeThickness))
-                                .remove(new Rectangle(stripeThickness, halfMaxHeight)
-                                                .translate(new Point2d(halfMaxWidth, 0.0)));
+                                .remove(new Ellipse(maxWidth - stripeThickness, maxHeight - stripeThickness))
+                                .remove((new Rectangle(halfMaxWidth, halfMaxHeight)
+                                               .translate(new Point2d(stripeThickness, 0.0))));
     }
 
     // TODO
     public static BaseShape create_l() {
 
-        return new Rectangle(maxWidth, stripeThickness);
+        return new Rectangle(stripeThickness, maxHeight);
     }
 
     // TODO
     public static BaseShape create_i() {
-        return new Square(100.0);
+        return new BaseShape().add(new Rectangle(stripeThickness, maxHeight))
+                .remove((new Rectangle(stripeThickness, stripeThickness + halfStripeThickness)).translate(new Point2d(0.0, - 2 * stripeThickness)));
     }
 
     // TODO
     public static BaseShape create_A() {
-        return new BaseShape().add(new Ellipse(maxWidth, maxHeight)).
-                remove(new Ellipse(maxWidth-stripeThickness, maxHeight - stripeThickness)).
-                remove((new Rectangle(stripeThickness, halfMaxHeight)).translate(new Point2d(halfMaxWidth, 0.0)));
+        return new BaseShape().add(new Rectangle(maxHeight,stripeThickness)
+                        .translate(new Point2d(-halfMaxHeight,0.0)))
+                .rotate(-Math.PI/5)
+                .add( new Rectangle(maxHeight,stripeThickness)
+                        .translate(new Point2d(-halfMaxHeight,0.0)))
+                .rotate(-Math.PI/2.5)
+                .add((new Rectangle(maxWidth, stripeThickness))
+                            .translate(new Point2d(0.0, halfMaxHeight + stripeThickness)));
     }
 
     // TODO
@@ -61,7 +70,15 @@ public final class LetterFactory {
 
     // TODO
     public static BaseShape create_n() {
-        return new Square(100.0);
+
+        return new BaseShape().add(new Ellipse(maxWidth, maxHeight))
+                                    .remove(new Ellipse(maxWidth - stripeThickness, maxHeight - stripeThickness))
+                .remove((new Rectangle(maxWidth, halfMaxHeight))
+                            .translate(new Point2d(0.0, halfMaxHeight / 2.0)))
+                .add((new Rectangle(stripeThickness, maxHeight))
+                            .translate(new Point2d(-halfMaxWidth, 0.0)))
+                .add((new Rectangle(halfStripeThickness, halfMaxHeight))
+                        .translate(new Point2d(halfMaxWidth - halfStripeThickness/2.0,  2 * stripeThickness)));
     }
 
     // TODO

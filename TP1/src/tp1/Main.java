@@ -10,15 +10,15 @@ public class Main {
     public static void main(String[] args) throws Exception {
         System.out.println("Bienvenue au premier labo de INF2010!");
         LetterPlacer letterPlacer = new LetterPlacer();
-        letterPlacer.placeNext('C');
+        letterPlacer.placeNextln('C');
         letterPlacer.placeNext('e');
-        letterPlacer.placeNextln('V');
-        letterPlacer.placeNext('B');
+        letterPlacer.placeNext('V');
+        letterPlacer.placeNextln('B');
         letterPlacer.placeNext('a');
-        letterPlacer.placeNextln('i');
+        letterPlacer.placeNext('i');
         letterPlacer.placeNext('n');
-        letterPlacer.placeNext('A');
-        letterPlacer.placeNextln('l');
+        letterPlacer.placeNextln('A');
+        letterPlacer.placeNext('l');
         letterPlacer.placeNext('r');
         /*letterPlacer.placeNext('l');
         letterPlacer.placeNext('a');

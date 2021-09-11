@@ -85,7 +85,7 @@ public class BaseShape implements Cloneable {
 
     private Double max(Integer index){
         if(coords.size() == 0)
-            return -Double.MAX_VALUE;
+            return 0.0;
         Double maximum= coords.iterator().next().vector[index];
         for (Point2d coord:coords) {
             maximum = Math.max(maximum,coord.vector[index]);
@@ -110,7 +110,7 @@ public class BaseShape implements Cloneable {
 
     private  Double min(Integer index){
         if(coords.size() == 0)
-            return Double.MAX_VALUE;
+            return 0.0;
         Double minimum= coords.iterator().next().vector[index];
         for (Point2d coord:coords) {
             minimum = Math.min(minimum,coord.vector[index]);

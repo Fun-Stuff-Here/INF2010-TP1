@@ -19,6 +19,7 @@ public class LetterTest {
     @Test
     void all() throws Exception {
         Tesseract tesseract = new Tesseract();
+        tesseract.setDatapath( System.getProperty("user.dir") + "/TP1/tessdata");
         LetterPlacer letterPlacer = new LetterPlacer();
         letterPlacer.placeNext('l');
         letterPlacer.placeNext('a');

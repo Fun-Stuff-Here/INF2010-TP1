@@ -1,0 +1,15 @@
+1.Identifiez un patron de conception autre que Fluent Builder dans le tp.
+	b. Donnez une brève description du patron et comment it est utilisé dans le tp.
+
+
+Le patron Abstract Factory a été utilisée pour la création des lettres en ayant la classe LetterFactory dans laquelle il y a tous les factory methodes pour chaque lettre.
+L'idée du patron est de regrouper tous les méthodes de construction d'objets de même sémantique à l'intérieur d'une classe. Il est possible d'avoir plus qu'une factory, mais dans le cas du tp
+il en a que une.
+
+2. Donnez une explication du patron composite.
+	b. Comment le patron composite aurait pu être utilisé dans ce travail pratique? 
+
+Le patron composite sert à pouvoir manipuler des objets seuls ou multiples, qui sont composé de façon récursive, de façon uniforme.
+Il est composé d'une interface qui sert de composante, puis on ajoute des feuilles et des composites qui implémente cette interface, un composite est faite de composantes.
+	   b. il aurait pu être utilisé pour les lettres qui sont composé de forme. Nous aurions alors dû définir une interface pour une forme pour ensuite en faire dérivé des classes
+	   concretes tel qu'une forme de base, cercle, ellipse, rectangle, A, b, C, l, etc.

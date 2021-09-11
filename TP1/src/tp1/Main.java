@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
         System.out.println("Bienvenue au premier labo de INF2010!");
         LetterPlacer letterPlacer = new LetterPlacer();
-        letterPlacer.placeNextln('C');
+        /*letterPlacer.placeNextln('C');
         letterPlacer.placeNext('e');
         letterPlacer.placeNext('V');
         letterPlacer.placeNextln('B');
@@ -20,7 +20,8 @@ public class Main {
         letterPlacer.placeNextln('A');
         letterPlacer.placeNext('l');
         letterPlacer.placeNext('r');
-        /*letterPlacer.placeNext('l');
+        */
+        letterPlacer.placeNext('l');
         letterPlacer.placeNext('a');
         letterPlacer.placeNextln('B');
         letterPlacer.placeNext('e');
@@ -29,7 +30,7 @@ public class Main {
         letterPlacer.placeNext('e');
         letterPlacer.placeNextln('V');
         letterPlacer.placeNext('i');
-        letterPlacer.placeNext('e');*/
+        letterPlacer.placeNext('e');
         File imgFile = letterPlacer.saveImage("image", false);
         Desktop dt = Desktop.getDesktop();
         dt.open(imgFile);

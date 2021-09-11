@@ -36,7 +36,7 @@ public final class LetterFactory {
     // TODO
     public static BaseShape create_l() {
 
-        return new Rectangle(stripeThickness, maxHeight);
+        return new Rectangle(stripeThickness, maxHeight).translate(new Point2d(-halfMaxWidth,0.0));
     }
 
     // TODO
